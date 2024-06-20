@@ -1,0 +1,352 @@
+[
+    {
+        "id": 1,
+        "title": "Skatepark Amsterdam",
+        "description": "A popular skatepark located in the Westerpark district of Amsterdam.",
+        "latitude": 52.379189,
+        "longitude": 4.880869
+    },
+    {
+        "id": 2,
+        "title": "Skatepark Rotterdam",
+        "description": "A modern skatepark situated in the Museumpark area of Rotterdam.",
+        "latitude": 51.917895,
+        "longitude": 4.469936
+    },
+    {
+        "id": 3,
+        "title": "Skatepark Utrecht",
+        "description": "A spacious skatepark in the Griftpark area, perfect for all levels.",
+        "latitude": 52.100198,
+        "longitude": 5.123876
+    },
+    {
+        "id": 4,
+        "title": "Skatepark The Hague",
+        "description": "A well-equipped skatepark located in the Zuiderpark of The Hague.",
+        "latitude": 52.062292,
+        "longitude": 4.296007
+    },
+    {
+        "id": 5,
+        "title": "Skatepark Eindhoven",
+        "description": "A vibrant skatepark with lots of features in the Area51 Skatepark of Eindhoven.",
+        "latitude": 51.448317,
+        "longitude": 5.472789
+    },
+    {
+        "id": 6,
+        "title": "Skatepark Tilburg",
+        "description": "A well-maintained skatepark in the Reeshofpark area of Tilburg.",
+        "latitude": 51.566779,
+        "longitude": 5.023938
+    },
+    {
+        "id": 7,
+        "title": "Skatepark Groningen",
+        "description": "A large skatepark in the Stadspark area with many ramps.",
+        "latitude": 53.213874,
+        "longitude": 6.554782
+    },
+    {
+        "id": 8,
+        "title": "Skatepark Breda",
+        "description": "A cool skatepark in the Belcrum area known for its half-pipes.",
+        "latitude": 51.589556,
+        "longitude": 4.779671
+    },
+    {
+        "id": 9,
+        "title": "Skatepark Nijmegen",
+        "description": "A favorite spot for skaters in the Goffertpark of Nijmegen.",
+        "latitude": 51.825431,
+        "longitude": 5.852892
+    },
+    {
+        "id": 10,
+        "title": "Skatepark Enschede",
+        "description": "A well-constructed skatepark in the Volkspark area of Enschede.",
+        "latitude": 52.218536,
+        "longitude": 6.881764
+    },
+    {
+        "id": 11,
+        "title": "Skatepark Haarlem",
+        "description": "A nice skatepark in the Kenaupark area with a variety of obstacles.",
+        "latitude": 52.388641,
+        "longitude": 4.639941
+    },
+    {
+        "id": 12,
+        "title": "Skatepark Almere",
+        "description": "A popular spot for skaters in the Lumièrepark area of Almere.",
+        "latitude": 52.375515,
+        "longitude": 5.231213
+    },
+    {
+        "id": 13,
+        "title": "Skatepark Arnhem",
+        "description": "A modern skatepark located in the Sonsbeekpark of Arnhem.",
+        "latitude": 51.985161,
+        "longitude": 5.914099
+    },
+    {
+        "id": 14,
+        "title": "Skatepark Zaanstad",
+        "description": "A vibrant skatepark in the Zaanse Rietvink area.",
+        "latitude": 52.450404,
+        "longitude": 4.823034
+    },
+    {
+        "id": 15,
+        "title": "Skatepark Amersfoort",
+        "description": "A well-equipped skatepark in the Eemplein area.",
+        "latitude": 52.158326,
+        "longitude": 5.387027
+    },
+    {
+        "id": 16,
+        "title": "Skatepark Apeldoorn",
+        "description": "A popular skatepark in the Zuiderpark area of Apeldoorn.",
+        "latitude": 52.214266,
+        "longitude": 5.948643
+    },
+    {
+        "id": 17,
+        "title": "Skatepark Den Bosch",
+        "description": "A modern skatepark in the Paleiskwartier area of Den Bosch.",
+        "latitude": 51.689455,
+        "longitude": 5.300526
+    },
+    {
+        "id": 18,
+        "title": "Skatepark Zwolle",
+        "description": "A spacious skatepark in the Wezenlandenpark area.",
+        "latitude": 52.509535,
+        "longitude": 6.092933
+    },
+    {
+        "id": 19,
+        "title": "Skatepark Leiden",
+        "description": "A popular skatepark in the Molen de Valk area of Leiden.",
+        "latitude": 52.158383,
+        "longitude": 4.494287
+    },
+    {
+        "id": 20,
+        "title": "Skatepark Maastricht",
+        "description": "A favorite spot for skaters in the Frontenpark of Maastricht.",
+        "latitude": 50.851244,
+        "longitude": 5.694583
+    },
+    {
+        "id": 21,
+        "title": "Skatepark Dordrecht",
+        "description": "A vibrant skatepark in the Merwestein area of Dordrecht.",
+        "latitude": 51.810024,
+        "longitude": 4.673141
+    },
+    {
+        "id": 22,
+        "title": "Skatepark Ede",
+        "description": "A modern skatepark in the Veldhuizen area of Ede.",
+        "latitude": 52.036732,
+        "longitude": 5.666172
+    },
+    {
+        "id": 23,
+        "title": "Skatepark Leeuwarden",
+        "description": "A popular skatepark in the Rengerspark area.",
+        "latitude": 53.202965,
+        "longitude": 5.798955
+    },
+    {
+        "id": 24,
+        "title": "Skatepark Emmen",
+        "description": "A well-constructed skatepark in the Rensenpark area.",
+        "latitude": 52.775391,
+        "longitude": 6.896478
+    },
+    {
+        "id": 25,
+        "title": "Skatepark Helmond",
+        "description": "A nice skatepark in the Warande area with various ramps.",
+        "latitude": 51.479889,
+        "longitude": 5.658232
+    },
+    {
+        "id": 26,
+        "title": "Skatepark Hilversum",
+        "description": "A vibrant skatepark in the Anna's Hoeve area.",
+        "latitude": 52.231922,
+        "longitude": 5.187972
+    },
+    {
+        "id": 27,
+        "title": "Skatepark Deventer",
+        "description": "A modern skatepark in the Worpplantsoen area.",
+        "latitude": 52.258135,
+        "longitude": 6.162654
+    },
+    {
+        "id": 28,
+        "title": "Skatepark Sittard",
+        "description": "A spacious skatepark in the Ligne area of Sittard.",
+        "latitude": 50.999893,
+        "longitude": 5.862957
+    },
+    {
+        "id": 29,
+        "title": "Skatepark Venlo",
+        "description": "A favorite spot for skaters in the Julianapark of Venlo.",
+        "latitude": 51.368235,
+        "longitude": 6.171045
+    },
+    {
+        "id": 30,
+        "title": "Skatepark Alkmaar",
+        "description": "A well-equipped skatepark in the Overstad area.",
+        "latitude": 52.632601,
+        "longitude": 4.754458
+    },
+    {
+        "id": 31,
+        "title": "Skatepark Gouda",
+        "description": "A popular skatepark in the Burgemeester van Reenensingel area.",
+        "latitude": 52.014681,
+        "longitude": 4.707744
+    },
+    {
+        "id": 32,
+        "title": "Skatepark Assen",
+        "description": "A modern skatepark in the Asserbos area.",
+        "latitude": 52.995004,
+        "longitude": 6.564351
+    },
+    {
+        "id": 33,
+        "title": "Skatepark Bergen op Zoom",
+        "description": "A nice skatepark in the Kijk in de Pot area.",
+        "latitude": 51.494724,
+        "longitude": 4.288192
+    },
+    {
+        "id": 34,
+        "title": "Skatepark Lelystad",
+        "description": "A vibrant skatepark in the Stadshart area.",
+        "latitude": 52.511856,
+        "longitude": 5.476011
+    },
+    {
+        "id": 35,
+        "title": "Skatepark Zoetermeer",
+        "description": "A spacious skatepark in the Stadshart area.",
+        "latitude": 52.059357,
+        "longitude": 4.497192
+    },
+    {
+        "id": 36,
+        "title": "Skatepark Almelo",
+        "description": "A well-constructed skatepark in the Hagenpark area.",
+        "latitude": 52.356777,
+        "longitude": 6.665471
+    },
+    {
+        "id": 37,
+        "title": "Skatepark Hengelo",
+        "description": "A modern skatepark in the Prins Bernhardplantsoen area.",
+        "latitude": 52.262684,
+        "longitude": 6.792985
+    },
+    {
+        "id": 38,
+        "title": "Skatepark Purmerend",
+        "description": "A popular skatepark in the Leeghwaterpark area.",
+        "latitude": 52.505464,
+        "longitude": 4.952935
+    },
+    {
+        "id": 39,
+        "title": "Skatepark Roosendaal",
+        "description": "A well-maintained skatepark in the Vrouwenhofpark area.",
+        "latitude": 51.532783,
+        "longitude": 4.466143
+    },
+    {
+        "id": 40,
+        "title": "Skatepark Schiedam",
+        "description": "A vibrant skatepark in the Beatrixpark area.",
+        "latitude": 51.924217,
+        "longitude": 4.389187
+    },
+    {
+        "id": 41,
+        "title": "Skatepark Lelystad",
+        "description": "A well-equipped skatepark in the Parkwijk area.",
+        "latitude": 52.511287,
+        "longitude": 5.486902
+    },
+    {
+        "id": 42,
+        "title": "Skatepark Spijkenisse",
+        "description": "A popular skatepark in the Hartelpark area.",
+        "latitude": 51.851288,
+        "longitude": 4.329301
+    },
+    {
+        "id": 43,
+        "title": "Skatepark Hoofddorp",
+        "description": "A spacious skatepark in the Toolenburg area.",
+        "latitude": 52.308789,
+        "longitude": 4.690351
+    },
+    {
+        "id": 44,
+        "title": "Skatepark Nieuwegein",
+        "description": "A modern skatepark in the Parkhout area.",
+        "latitude": 52.033741,
+        "longitude": 5.083524
+    },
+    {
+        "id": 45,
+        "title": "Skatepark Venray",
+        "description": "A favorite spot for skaters in the Odapark area.",
+        "latitude": 51.527758,
+        "longitude": 5.976442
+    },
+    {
+        "id": 46,
+        "title": "Skatepark Weert",
+        "description": "A well-equipped skatepark in the De IJzeren Man area.",
+        "latitude": 51.253004,
+        "longitude": 5.710008
+    },
+    {
+        "id": 47,
+        "title": "Skatepark Oosterhout",
+        "description": "A popular skatepark in the Slotjes area.",
+        "latitude": 51.644721,
+        "longitude": 4.860651
+    },
+    {
+        "id": 48,
+        "title": "Skatepark Vlaardingen",
+        "description": "A spacious skatepark in the Oranjepark area.",
+        "latitude": 51.910546,
+        "longitude": 4.346589
+    },
+    {
+        "id": 49,
+        "title": "Skatepark Waalwijk",
+        "description": "A modern skatepark in the Taxandriaweg area.",
+        "latitude": 51.687896,
+        "longitude": 5.065826
+    },
+    {
+        "id": 50,
+        "title": "Skatepark Heerenveen",
+        "description": "A well-constructed skatepark in the De Greiden area.",
+        "latitude": 52.959823,
+        "longitude": 5.919569
+    }
+]
