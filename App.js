@@ -1,79 +1,118 @@
 //#region imports
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import MapView from "react-native-maps";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import MenuItems from "./components/menu/MenuItems";
-import { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
+//Screens
+import ListScreen from "./screens/ListScreen";
+import SettingsScreen from "./screens/SettingsScreen";
+import HomeScreen from "./screens/HomeScreen";
+//Icons
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { StyleSheet } from "react-native";
+import useAsyncStorage from "./services/useAsyncStorage";
+import { ThemeProvider, useTheme } from "./providers/ThemeProvider";
+//#endregion
 
-//#endregion imports
-
-export default function App() {
-  function HomeScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <MapView
-          style={styles.map}
-          region={{
-            latitude: 52.1326,
-            longitude: 5.2913,
-            latitudeDelta: 3,
-            longitudeDelta: 3,
-          }}
-        />
-      </View>
-    );
-  }
-
-  function SettingsScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>Settings</Text>
-      </View>
-    );
-  }
-  function ListScreen() {
-    return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <Text>List</Text>
-      </View>
-    );
-  }
-
+const Main = () => {
   const Tab = createBottomTabNavigator();
+
+  //#region CSS
+  const { isDarkMode } = useTheme();
+
+  const styles = StyleSheet.create({
+    header: {
+      backgroundColor: isDarkMode ? "#B55555" : "#D9D9D9",
+    },
+    tabBar: {
+      backgroundColor: isDarkMode ? "#D9D9D9" : "#D9D9D9",
+    },
+    headerTitle: {
+      color: "white",
+    },
+  });
+  //#endregion
 
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="Home">
-        <Tab.Screen name="List" component={ListScreen} />
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Navigator
+        //"initialRouteName" is the start screen
+        initialRouteName="Home"
+        screenOptions={({ route }) => ({
+          headerStyle: styles.header,
+          tabBarStyle: styles.tabBar,
+
+          //#region Nav ICons
+          tabBarIcon: ({ focused, color, size }) => {
+            switch (
+              route.name // switch case is the same as an if but you don't have to press in this example "route.name" once
+            ) {
+              case "Home":
+                return (
+                  <Ionicons
+                    size={size}
+                    name="home"
+                    color={focused ? "#B55555" : ""}
+                  />
+                );
+              case "List":
+                return (
+                  <Ionicons
+                    size={size}
+                    name="list"
+                    color={focused ? "#B55555" : ""}
+                  />
+                );
+              case "Settings":
+                return (
+                  <Ionicons
+                    size={size}
+                    name="cog"
+                    color={focused ? "#B55555" : ""}
+                  />
+                );
+              default:
+                // if route not found
+                return (
+                  <Ionicons size={size} name="closecircle" color={color} />
+                );
+            }
+          },
+          tabBarShowLabel: false, //doesn't show label name on the tab
+          //#endregion
+        })}
+      >
+        {/* Tab Start */}
+        <Tab.Screen
+          name="List"
+          component={ListScreen}
+          options={{
+            headerTintColor: isDarkMode ? "#fff" : "#000",
+          }}
+        />
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerTintColor: isDarkMode ? "#fff" : "#000",
+          }}
+        />
+        <Tab.Screen
+          name="Settings"
+          component={SettingsScreen}
+          options={{
+            headerTintColor: isDarkMode ? "#fff" : "#000",
+          }}
+        />
+        {/* Tab End */}
       </Tab.Navigator>
     </NavigationContainer>
   );
+};
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <Main />
+    </ThemeProvider>
+  );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#25292e",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  nav: {
-    backgroundColor: "#d9d9d9",
-    height: "84px",
-    width: "390px",
-    position: "absolute",
-    top: "760px",
-    left: "0px",
-  },
-
-  map: {
-    width: "100%",
-    height: "100%",
-  },
-});
