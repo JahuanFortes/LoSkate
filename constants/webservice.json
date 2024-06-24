@@ -103,6 +103,12 @@
         "description": "A well-equipped skatepark in the Eemplein area.",
         "latitude": 52.158326,
         "longitude": 5.387027
+    },
+  {
+        "id": 16,
+        "title": "Skatepark Amersfoort",
+        "description": "A well-equipped skatepark in the Eemplein area.",
+        "latitude": 53.158326,
+        "longitude": 4.387027
     }
-
 ]
