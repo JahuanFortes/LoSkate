@@ -25,6 +25,8 @@ const Main = () => {
     },
     tabBar: {
       backgroundColor: isDarkMode ? "#D9D9D9" : "#D9D9D9",
+      padding: 0,
+      margin: 0,
     },
     headerTitle: {
       color: "white",

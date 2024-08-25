@@ -7,15 +7,23 @@ import { useState, useEffect } from "react";
 import { useUserLocation } from "../services/useUserLocation";
 import placeholder from "../assets/cat.png";
 import useAsyncStorage from "../services/useAsyncStorage";
+import { useTheme } from "../providers/ThemeProvider";
+
 //#endregion imports
 
 const DetailScreen = ({ id, onBack }) => {
+  const { isDarkMode } = useTheme();
+
   //#region CSS
   const styles = StyleSheet.create({
+    background: {
+      backgroundColor: isDarkMode ? "#222222" : "white",
+    },
     container: {
       flex: 1,
       alignItems: "center",
-      paddingTop: "30em",
+      paddingBottom: "55%",
+      backgroundColor: isDarkMode ? "#222222" : "white",
     },
     map: {
       width: "100%",
@@ -25,6 +33,9 @@ const DetailScreen = ({ id, onBack }) => {
       objectFit: "cover",
       width: 120,
       height: 100,
+    },
+    text: {
+      color: isDarkMode ? "white" : "black",
     },
   });
   //#endregion
@@ -92,7 +103,7 @@ const DetailScreen = ({ id, onBack }) => {
   //#endregion
 
   return (
-    <View>
+    <View style={styles.background}>
       {/* Map Detail page Start */}
       <MapView
         style={styles.map}
@@ -128,11 +139,11 @@ const DetailScreen = ({ id, onBack }) => {
 
       {/* Detail Text area Start*/}
       <View style={styles.container}>
-        <Text>{data.title}</Text>
+        <Text style={styles.text}>{data.title}</Text>
 
         <Image source={placeholder} style={styles.image} />
 
-        <Text>{data.description}</Text>
+        <Text style={styles.text}>{data.description}</Text>
 
         <Button
           onPress={isFavorite ? removeFavorite : makeFavorite}

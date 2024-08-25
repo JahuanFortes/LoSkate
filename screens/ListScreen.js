@@ -5,16 +5,24 @@ import { ErrorMessage } from "../components/shared/errorMessage";
 import ListItem from "../components/list/ListItem";
 import DetailScreen from "./DetailScreen";
 import { useState } from "react";
+import { useTheme } from "../providers/ThemeProvider";
+
 //#endregion
 
 const ListScreen = () => {
+  const { isDarkMode } = useTheme();
+
   //#region UseState
   const { data, isLoading, error, refresh } = useSkateParksQuery();
   const [selectedId, setSelectedId] = useState(null);
   //#endregion
 
   //#region CSS
-  const styles = StyleSheet.create({});
+  const styles = StyleSheet.create({
+    container: {
+      backgroundColor: isDarkMode ? "#222222" : "white",
+    },
+  });
   //#endregion
 
   //#region ErrorHandeling
@@ -44,7 +52,7 @@ const ListScreen = () => {
 
   return (
     //#region ListPage
-    <ScrollView>
+    <ScrollView style={styles.container}>
       {data.map((listItem) => (
         // creates LI for every item
         <ListItem

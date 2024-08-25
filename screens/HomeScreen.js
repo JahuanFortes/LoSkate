@@ -7,6 +7,7 @@ import useSkateParksQuery from "../services/useSkateParksQuery";
 import DetailScreen from "./DetailScreen";
 import { ErrorMessage } from "../components/shared/errorMessage";
 import { useUserLocation } from "../services/useUserLocation";
+import { useTheme } from "../providers/ThemeProvider";
 //#endregion
 
 const HomeScreen = () => {
@@ -14,16 +15,35 @@ const HomeScreen = () => {
   const { data, isLoading, error, refresh } = useSkateParksQuery();
   const [selectedId, setSelectedId] = useState(null);
   const { location } = useUserLocation();
+
   //#endregion
 
   //#region CSS
-  const styles = StyleSheet.create({
+  const { isDarkMode } = useTheme();
+  const defaultStyles = StyleSheet.create({
     container: { flex: 1, justifyContent: "center", alignItems: "center" },
     map: {
       width: "100%",
       height: "100%",
     },
   });
+
+  const stylesLight = StyleSheet.create({
+    container: {
+      backgroundColor: "white",
+    },
+  });
+
+  const stylesDark = StyleSheet.create({
+    container: {
+      backgroundColor: "#222222",
+    },
+  });
+
+  const styles = {
+    ...defaultStyles,
+    ...(isDarkMode ? stylesDark : stylesLight),
+  };
   //#endregion
 
   //#region ErrorHandeling
