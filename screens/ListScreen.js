@@ -3,18 +3,16 @@ import { View, StyleSheet, ScrollView, Text } from "react-native";
 import useSkateParksQuery from "../services/useSkateParksQuery";
 import { ErrorMessage } from "../components/shared/errorMessage";
 import ListItem from "../components/list/ListItem";
-import DetailScreen from "./DetailScreen";
 import { useState } from "react";
 import { useTheme } from "../providers/ThemeProvider";
 
 //#endregion
 
-const ListScreen = () => {
+const ListScreen = ({ navigation }) => {
   const { isDarkMode } = useTheme();
 
   //#region UseState
   const { data, isLoading, error, refresh } = useSkateParksQuery();
-  const [selectedId, setSelectedId] = useState(null);
   //#endregion
 
   //#region CSS
@@ -44,9 +42,7 @@ const ListScreen = () => {
   //#endregion
 
   //#region SelectedList OnClick
-  if (selectedId) {
-    return <DetailScreen id={selectedId} onBack={() => setSelectedId(null)} />;
-  }
+
   // Else show data
   //#endregion
 
@@ -58,10 +54,11 @@ const ListScreen = () => {
         <ListItem
           key={listItem.id}
           data={listItem}
-          onPress={(id) => setSelectedId(id)}
+          onPress={(id) => navigation.navigate("D etails", { id })}
         />
       ))}
     </ScrollView>
+
     //#endregion
   );
 };

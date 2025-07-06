@@ -11,12 +11,15 @@ import { useTheme } from "../providers/ThemeProvider";
 
 //#endregion imports
 
-const DetailScreen = ({ id, onBack }) => {
+const DetailScreen = ({ route, navigation }) => {
   const { isDarkMode } = useTheme();
+
+  const { id } = route?.params;
 
   //#region CSS
   const styles = StyleSheet.create({
     background: {
+      height: "100%",
       backgroundColor: isDarkMode ? "#222222" : "white",
     },
     container: {
@@ -36,6 +39,9 @@ const DetailScreen = ({ id, onBack }) => {
     },
     text: {
       color: isDarkMode ? "white" : "black",
+    },
+    header: {
+      backgroundColor: isDarkMode ? "#B55555" : "#D9D9D9",
     },
   });
   //#endregion
@@ -149,7 +155,7 @@ const DetailScreen = ({ id, onBack }) => {
           onPress={isFavorite ? removeFavorite : makeFavorite}
           title={isFavorite ? "Remove from Favorite" : "Add to Favorite"} //if already fav btn = remove fav; else = add fav
         />
-        <Button onPress={onBack} title="Back" />
+        <Button onPress={navigation.goBack} title="Back" />
       </View>
       {/* Detail Text area End*/}
     </View>

@@ -2,12 +2,14 @@
 import { useState, useEffect } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import * as Location from "expo-location";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import useSkateParksQuery from "../services/useSkateParksQuery";
 import DetailScreen from "./DetailScreen";
 import { ErrorMessage } from "../components/shared/errorMessage";
 import { useUserLocation } from "../services/useUserLocation";
 import { useTheme } from "../providers/ThemeProvider";
+import { useNavigation } from "@react-navigation/native";
+
 //#endregion
 
 const HomeScreen = () => {
@@ -15,6 +17,7 @@ const HomeScreen = () => {
   const { data, isLoading, error, refresh } = useSkateParksQuery();
   const [selectedId, setSelectedId] = useState(null);
   const { location } = useUserLocation();
+  const navigation = useNavigation();
 
   //#endregion
 
@@ -65,9 +68,7 @@ const HomeScreen = () => {
   //#endregion
 
   //#region Pin Selection
-  if (selectedId) {
-    return <DetailScreen id={selectedId} onBack={() => setSelectedId(null)} />;
-  }
+
   //#endregion
 
   return (
@@ -75,12 +76,14 @@ const HomeScreen = () => {
       {/* Map */}
       <MapView
         style={styles.map}
+        provider={PROVIDER_GOOGLE}
         region={{
           latitude: 52.1326,
           longitude: 5.2913,
           latitudeDelta: 3,
           longitudeDelta: 3,
         }}
+        userInterfaceStyle={isDarkMode ? "dark" : "light"}
       >
         {/* Map end */}
 
@@ -94,7 +97,9 @@ const HomeScreen = () => {
             }}
             title={markerItem.title}
             description={markerItem.description}
-            onPress={() => setSelectedId(markerItem.id)}
+            onPress={() =>
+              navigation.navigate("Details", { id: markerItem.id })
+            }
             //Marker Location End
           />
         ))}
